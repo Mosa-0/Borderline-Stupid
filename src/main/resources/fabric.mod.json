@@ -19,10 +19,12 @@
 			"com.gmail.pokepuff37.bls.BorderlineStupid",
 			"com.gmail.pokepuff37.bls.block.BorderlineStupidBlocks",
 			"com.gmail.pokepuff37.bls.item.BorderlineStupidItems",
-			"com.gmail.pokepuff37.bls.commands.BorderLineStupidCommands"
+			"com.gmail.pokepuff37.bls.commands.BorderLineStupidCommands",
+			"com.gmail.pokepuff37.bls.events.BorderlineStupidEvents"
 		],
 		"client": [
-			"com.gmail.pokepuff37.bls.BorderlineStupidClient"
+			"com.gmail.pokepuff37.bls.BorderlineStupidClient",
+			"com.gmail.pokepuff37.bls.commands.BorderlineStupidClientCommands"
 		]
 	},
 	"mixins": [
