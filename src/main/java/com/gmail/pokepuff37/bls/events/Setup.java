@@ -1,14 +1,15 @@
 package com.gmail.pokepuff37.bls.events;
 
-import net.minecraft.world.Heightmap;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 
-import static net.fabricmc.fabric.impl.resource.loader.ResourcePackSourceTracker.getSource;
-import static net.minecraft.world.Heightmap.Type.WORLD_SURFACE;
-import static net.minecraft.world.World.OVERWORLD;
+import static com.gmail.pokepuff37.bls.events.PersistentVariables.*;
 
 public class Setup {
     public static void runSetup() {
-    new World();
+        timerTicksMax = 30000L;
+        timerMinutesMax = 25;
+        timerSecondsMax = 0;
     }
+
 }

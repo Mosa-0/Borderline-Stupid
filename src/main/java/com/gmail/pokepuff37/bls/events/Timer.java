@@ -11,9 +11,6 @@ public class Timer {
     public static int timerMinutes = 0;
 
     public static boolean newMax = false;
-    public static long timerTicksMax = 30000L;
-    public static int timerSecondsMax = 25;
-    public static int timerMinutesMax = 0;
 
     public static void init() {
         timerCount();

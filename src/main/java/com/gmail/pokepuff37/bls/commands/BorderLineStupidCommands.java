@@ -1,6 +1,5 @@
 package com.gmail.pokepuff37.bls.commands;
 
-import com.gmail.pokepuff37.bls.events.Setup;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -13,9 +12,9 @@ import net.minecraft.text.Text;
 
 import static com.gmail.pokepuff37.bls.events.Setup.runSetup;
 import static com.gmail.pokepuff37.bls.events.Timer.*;
+import static com.gmail.pokepuff37.bls.events.PersistentVariables.*;
 
 public class BorderLineStupidCommands implements ModInitializer {
-    private static boolean wasSetUp = false;
 
     private static int executeTimerChange(CommandContext<ServerCommandSource> context) {
         int minutes = IntegerArgumentType.getInteger(context, "minutes");
@@ -35,7 +34,6 @@ public class BorderLineStupidCommands implements ModInitializer {
                 timerMinutesMax = timerMinutes;
                 timerSecondsMax = timerSeconds;
                 timerTicksMax = timerTicks;
-                newMax = false;
                 if (minutes < 10 && seconds < 10) {
                     context.getSource().sendFeedback(() -> Text.literal("Changed max length of timer to be 0%s:0%s.".formatted(minutes, seconds)), true);
                 } else if (minutes < 10) {
@@ -83,6 +81,16 @@ public class BorderLineStupidCommands implements ModInitializer {
             return 0;
         }
     }
+    private static int executeTest(CommandContext<ServerCommandSource> context) {
+        if (wasSetUp){
+            System.out.println(wasSetUp);
+            wasSetUp = false;
+        } else {
+            System.out.println(wasSetUp);
+            wasSetUp = true;
+        }
+        return 1;
+    }
 
         @Override
     public void onInitialize() {
@@ -110,12 +118,18 @@ public class BorderLineStupidCommands implements ModInitializer {
                     .requires(source -> source.hasPermissionLevel(2))
                     .executes(BorderLineStupidCommands::executeRun)
                     .build();
+            LiteralCommandNode<ServerCommandSource> testNode = CommandManager
+                    .literal("test")
+                    .requires(source -> source.hasPermissionLevel(2))
+                    .executes(BorderLineStupidCommands::executeTest)
+                    .build();
 
             // Collecting minors
             dispatcher.getRoot().addChild(blsNode);
             blsNode.addChild(timerChangeNode);
             blsNode.addChild(setupNode);
             blsNode.addChild(runNode);
+            blsNode.addChild(testNode);
         });
     }
 }
