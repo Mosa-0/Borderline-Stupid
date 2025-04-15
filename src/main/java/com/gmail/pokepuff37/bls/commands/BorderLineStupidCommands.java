@@ -12,7 +12,7 @@ import net.minecraft.text.Text;
 
 import static com.gmail.pokepuff37.bls.events.Setup.runSetup;
 import static com.gmail.pokepuff37.bls.events.Timer.*;
-import static com.gmail.pokepuff37.bls.events.PersistentVariables.*;
+import static com.gmail.pokepuff37.bls.events.BorderlinePersistentVariables.*;
 
 public class BorderLineStupidCommands implements ModInitializer {
 
