@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.gmail.pokepuff37.bls.mixin.client",
+	"package": "org.mosa0.bls.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ExampleClientMixin"
+      "ExampleClientMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

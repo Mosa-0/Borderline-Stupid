@@ -5,26 +5,26 @@
 	"name": "Borderline Stupid",
 	"description": "Random events happen every 25 minutes. Chaos ensues. (Best played in sessions)",
 	"authors": [
-		"PokePuff37: Code, RedstoneLamp08: Textures"
+		"Code: Mosa0, Textures: RedstoneLamp08"
 	],
 	"contact": {
-		"homepage": "https://github.com/PokePuff37",
-		"sources": "https://github.com/PokePuff37/Borderline-Stupid"
+		"homepage": "https://github.com/Mosa-0",
+		"sources": "https://github.com/Mosa-0/Borderline-Stupid"
 	},
 	"license": "CC BY-SA 4.0",
 	"icon": "assets/bls/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.gmail.pokepuff37.bls.BorderlineStupid",
-			"com.gmail.pokepuff37.bls.block.BorderlineStupidBlocks",
-			"com.gmail.pokepuff37.bls.item.BorderlineStupidItems",
-			"com.gmail.pokepuff37.bls.commands.BorderLineStupidCommands",
-			"com.gmail.pokepuff37.bls.events.BorderlineStupidEvents"
+			"org.mosa0.bls.BorderlineStupid",
+			"org.mosa0.bls.block.BorderlineStupidBlocks",
+			"org.mosa0.bls.item.BorderlineStupidItems",
+			"org.mosa0.bls.commands.BorderLineStupidCommands",
+			"org.mosa0.bls.events.BorderlineStupidEvents"
 		],
 		"client": [
-			"com.gmail.pokepuff37.bls.BorderlineStupidClient",
-			"com.gmail.pokepuff37.bls.commands.BorderlineStupidClientCommands"
+			"org.mosa0.bls.BorderlineStupidClient",
+			"org.mosa0.bls.commands.BorderlineStupidClientCommands"
 		]
 	},
 	"mixins": [
