@@ -3,7 +3,7 @@
 	"package": "org.mosa0.bls.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-      "ExampleMixin"
+		"SpawnProtectionModifier"
 	],
 	"injectors": {
 		"defaultRequire": 1

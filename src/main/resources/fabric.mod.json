@@ -8,7 +8,7 @@
 		"Code: Mosa0, Textures: RedstoneLamp08"
 	],
 	"contact": {
-		"homepage": "https://github.com/Mosa-0",
+		"homepage": "https://mosa0.org",
 		"sources": "https://github.com/Mosa-0/Borderline-Stupid"
 	},
 	"license": "CC BY-SA 4.0",
@@ -16,22 +16,19 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"org.mosa0.bls.BorderlineStupid",
-			"org.mosa0.bls.block.BorderlineStupidBlocks",
-			"org.mosa0.bls.item.BorderlineStupidItems",
-			"org.mosa0.bls.commands.BorderLineStupidCommands",
-			"org.mosa0.bls.events.BorderlineStupidEvents"
+			"org.mosa0.bls.BorderlineStupidInitializer",
+			"org.mosa0.bls.commands.BorderlineCommands"
 		],
 		"client": [
 			"org.mosa0.bls.BorderlineStupidClient",
-			"org.mosa0.bls.commands.BorderlineStupidClientCommands"
+			"org.mosa0.bls.commands.BorderlineClientCommands"
 		]
 	},
 	"mixins": [
 		"bls.mixins.json",
 		{
 			"config": "bls.client.mixins.json",
-			"environment": "*"
+			"environment": "client"
 		}
 	],
 	"depends": {

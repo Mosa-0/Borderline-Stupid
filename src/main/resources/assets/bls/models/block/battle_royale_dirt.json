@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "bls:block/fortnite_dirt"
+    "all": "bls:block/battle_royale_dirt"
   }
 }

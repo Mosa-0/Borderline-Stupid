@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.minecraft.text.Text;
 
-public class BorderlineStupidClientCommands implements ClientModInitializer {
+public class BorderlineClientCommands implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
@@ -15,6 +15,5 @@ public class BorderlineStupidClientCommands implements ClientModInitializer {
                 return 1;
             }));
         });
-        // :::1
     }
 }
