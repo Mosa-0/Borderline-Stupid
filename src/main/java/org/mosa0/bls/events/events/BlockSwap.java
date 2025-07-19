@@ -123,7 +123,7 @@ public class BlockSwap {
 
         if (initialBlockType.getStateManager().getStates().isEmpty()) {
             for (BlockPos blockPos : initialBlockCords) {
-                overworld.setBlockState(blockPos); // temp
+//                overworld.setBlockState(blockPos); // temp
             }
         } else {
             for (BlockPos blockPos : initialBlockCords) {
